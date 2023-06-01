@@ -1,0 +1,41 @@
+<html>
+<head>
+	<title>Мой блог</title>
+    {% load static %}
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css" media="all" />
+
+</head>
+<body>
+    <div class="shell">
+		<div class="border">
+
+			<div id="navigation">
+				<ul>
+					<li><a href="/index" class="active">Главная</a></li>
+					<li><a href="/admin">Админ панель</a></li>
+                    <li><a href="{% url 'all_posts' %}">Все посты</a></li>
+				</ul>
+			</div>
+
+			<div id="main">
+                <div class="category-grid">
+                    {% for category in category_list %}
+                    <div class="category-tile">
+                      <a href="{% url 'post_list_by_category' category.id %}">
+                        <img src="{{ category.picture.url }}" alt="{{ category.name }}">
+                        <h3>{{ category.name }}</h3>
+                        <p>{{ category.description }}</p>
+                      </a>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <div id="footer">
+                <p class="copy right">Copyright &copy;  2022 </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

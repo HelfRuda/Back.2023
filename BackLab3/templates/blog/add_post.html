@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Добавить пост</title>
+</head>
+<body>
+  <h2>Добавить пост</h2>
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <label for="{{ form.tags.id_for_label }}">Теги:</label>
+    {{ form.tags }}
+    <br>
+    <label for="{{ form.category.id_for_label }}">Категория:</label>
+    {{ form.category }}
+    <br>
+    <label for="{{ form.title.id_for_label }}">Заголовок поста:</label>
+    {{ form.title }}
+    <br>
+    <label for="{{ form.description.id_for_label }}">Текст поста:</label>
+    {{ form.description }}
+    <br>
+    <label for="{{ form.picture.id_for_label }}">Картинка поста:</label>
+    {{ form.picture }}
+    <br>
+    <button type="submit">Добавить</button>
+  </form>
+</body>
+</html>
