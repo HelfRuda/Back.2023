@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Список постов</title>
+</head>
+<body>
+  <h1>Список постов</h1>
+  <ul>
+    {% for post in posts %}
+      <li>{{ post.title }} <a href="/post/{{ post.pk }}/edit/">редактировать</a> <a href="/post/{{ post.pk }}/delete/">удалить</a></li>
+    {% empty %}
+      <li>Нет постов.</li>
+    {% endfor %}
+  </ul>
+  <a href="/post/create/">Создать новый пост</a>
+</body>
+</html>
