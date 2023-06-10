@@ -1,0 +1,58 @@
+<html>
+<head>
+	<title>Мой блог</title>
+    {% load static %}
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css" media="all" />
+</head>
+<body>
+	<div class="shell">
+		<div class="border">
+
+			<div id="navigation">
+				<ul>
+					<li><a href="/index" class="active">Главная</a></li>
+					<li><a href="/admin">Админ панель</a></li>
+            		<li><a href="{% url 'all_posts' %}">Все посты</a></li>
+				</ul>
+			</div>
+
+			<div id="main">
+				<div id="content" class="left">
+					
+					<div class="projects">
+						<h3>Посты</h3>
+						{% for post in post_list %}
+						<div class="item">
+							<div class="image left">
+								<a href="#"><img src = "{{ post.picture.url }}" width="200px"></a>
+							</div>
+							<div class="text left">
+								<h4><a href="{{ post.id }}">{{ post.title }}</a></h4>
+								<p>{{ post.description }}</p>
+								<p>Автор:  {{ post.author }}</p>
+								<p>Дата:  {{ post.date }}</p>
+								<div class="tags">
+									{% for tag in post.tags.all %}
+									  <span class="tag">{{ tag.name }}</span>
+									{% endfor %}
+								</div>
+							</div>
+							<div class="cl"> </div>
+						</div>
+						{% endfor %}
+					</div>
+				</div>
+				
+				<div class="cl">&nbsp;</div>
+			</div>
+			
+
+		</div>
+		
+		<div id="footer">
+			<p class="copy right">Copyright &copy;  2022 </p>
+		</div>
+	</div>
+</body>
+</html>
