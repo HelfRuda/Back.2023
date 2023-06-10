@@ -1,0 +1,213 @@
+/* Общие стили */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F8F8F8;
+  }
+  
+  a {
+    color: #337ab7;
+    text-decoration: none;
+  }
+  
+  /* Шапка навигации */
+  #navigation {
+    background-color: #333;
+    padding: 10px;
+  }
+  
+  #navigation ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #navigation li {
+    display: inline;
+    margin-right: 10px;
+  }
+  
+  #navigation a {
+    color: #FFF;
+    padding: 5px;
+  }
+  
+  #navigation a.active {
+    background-color: #666;
+    border-radius: 3px;
+  }
+  
+  /* Основной контент */
+  #main {
+    margin-top: 20px;
+  }
+  
+  #content {
+    width: 70%;
+    float: left;
+    margin-right: 20px;
+  }
+  
+  .projects {
+    background-color: #FFF;
+    padding: 10px;
+  }
+  
+  .item {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #DDD;
+  }
+  
+  .item:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+  
+  .item .image {
+    width: 200px;
+    float: left;
+    margin-right: 20px;
+  }
+  
+  .item .text {
+    overflow: hidden;
+  }
+  
+  .item h4 {
+    margin: 0;
+  }
+  
+  .item p {
+    margin: 10px 0;
+  }
+  
+  .cl {
+    clear: both;
+  }
+  
+  /* Подвал */
+  #footer {
+    display: block;
+    background-color: #333;
+    padding: 10px;
+    color: #FFF;
+    text-align: center;
+  }
+
+  .tags {
+    margin-top: 10px;
+  }
+  
+  .tag {
+    display: inline-block;
+    background-color: #13c156;
+    color: #333333;
+    padding: 5px 10px;
+    margin-right: 5px;
+    border-radius: 5px;
+  }
+
+  .form-comment {
+    margin-top: 20px;
+  }
+  
+  .form-comment h3 {
+    margin: 0 0 10px;
+  }
+  
+  .form-comment form {
+    background-color: #F5F5F5;
+    padding: 10px;
+  }
+  
+  .form-comment label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .form-comment textarea {
+    width: 100%;
+    height: 100px;
+    padding: 5px;
+    border: 1px solid #DDD;
+    border-radius: 5px;
+    resize: vertical;
+  }
+  
+  .form-comment input[type="submit"] {
+    background-color: #337ab7;
+    color: #FFF;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .form-comment input[type="submit"]:hover {
+    background-color: #286090;
+  }
+
+  .category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 20px;
+  }
+  
+  .category-tile {
+    background-color: #f4f4f4;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .category-tile a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .category-tile img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  .category-tile h3 {
+    font-size: 18px;
+    margin: 0;
+  }
+  
+  .category-tile p {
+    margin: 0;
+  }
+
+  .comms {
+    margin-top: 20px;
+  }
+  
+  .comms h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .comms ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .comms li {
+    margin-bottom: 20px;
+  }
+  
+  .comm {
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+  
+  .comm .comm-author {
+    font-weight: bold;
+  }
+
+  
+  .comm .comm-text {
+    margin-top: 10px;
+  }
